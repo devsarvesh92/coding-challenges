@@ -1,8 +1,9 @@
 
 
 
-from pydantic import Field
+from pydantic import BaseModel, Field
 
 
-class WCResult:
+class WCResult(BaseModel):
     byte_count:int = Field(default=0)
+    line_count:int = Field(default=0)
